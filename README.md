@@ -62,25 +62,26 @@ The dataset is a zipped chest X-ray image collection (`Archive (1).zip`) stored 
 - **71 / 624** test images were misclassified — see the misclassified image grid below.
 - The confusion matrix below shows the model over-predicts PNEUMONIA on NORMAL cases (65 false positives) while rarely missing true PNEUMONIA cases (only 6 false negatives).
 
-### Train / Validation / Test Comparison
+### Training vs Validation Accuracy
+![Misclassified Test Images](Diagram/1.jpeg)  
+
+### Training vs Validation Loss
 ![Train Validation Test Comparison](Diagram/2.jpeg)
 
 ### Confusion Matrix
 ![Confusion Matrix](Diagram/3.jpeg)
 
+### Train / Validation / Test Comparison
+![Training vs Validation Loss](Diagram/4.jpeg)
+
+### Misclassified Test Images
+![Training vs Validation Accuracy](Diagram/5.jpeg)
+
+
 ## Observations
 
 - Training accuracy climbs smoothly and steadily, while validation accuracy is noisy and volatile across epochs, indicating some overfitting and/or a small/imbalanced validation set.
 - The model favors recall on PNEUMONIA over precision on NORMAL — it tends to over-flag NORMAL X-rays as PNEUMONIA, as seen in the misclassified examples below.
-
-### Training vs Validation Loss
-![Training vs Validation Loss](Diagram/4.jpeg)
-
-### Training vs Validation Accuracy
-![Training vs Validation Accuracy](Diagram/5.jpeg)
-
-### Misclassified Test Images
-![Misclassified Test Images](Diagram/1.jpeg)
 
 ## How to Run
 
